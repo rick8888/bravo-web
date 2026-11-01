@@ -26,6 +26,7 @@ export function Layout({
   children,
   theme = 'light',
   className,
+  minimal = false,
 }) {
   const [lenis, setLenis] = useStore((state) => [state.lenis, state.setLenis])
   const router = useRouter()
@@ -102,12 +103,12 @@ export function Layout({
     <>
       <CustomHead {...seo} />
       <div className={cn(`theme-${theme}`, s.layout, className)}>
-        <PageTransition />
-        <Intro />
-        <Cursor />
-        <Scrollbar />
+        {!minimal && <PageTransition />}
+        {!minimal && <Intro />}
+        {!minimal && <Cursor />}
+        {!minimal && <Scrollbar />}
         <main className={s.main}>{children}</main>
-        <Footer />
+        {!minimal && <Footer />}
       </div>
     </>
   )
