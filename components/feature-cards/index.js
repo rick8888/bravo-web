@@ -7,7 +7,7 @@ const activities = [
     title: 'RH',
     description:
       'Simplifiez la gestion de vos équipes, des dossiers du personnel au suivi des ressources humaines.',
-    href: 'https://rh.bravo-group.com',
+    href: 'https://rh.bravo-groupe.com',
   },
   {
     name: 'Stock & logistique',
@@ -18,10 +18,11 @@ const activities = [
   },
   {
     name: 'Services connectés',
-    title: 'Uduma Service Connect',
+    title: 'Uduma',
     description:
       'Mettez en relation les demandeurs et les porteurs de services, simplement.',
-    href: 'https://uduma.bravo-groupe.com',
+    href: '/uduma',
+    cta: 'Découvrir Uduma',
   },
 ]
 
@@ -29,7 +30,7 @@ export const FeatureCards = () => {
   return (
     <div className={s.features}>
       <div className={s.cards}>
-        {activities.map(({ name, title, description, href }, index) => (
+        {activities.map(({ name, title, description, href, cta }, index) => (
           <article className={s.card} key={title}>
             <div className={s.cardTop}>
               <span className={s.number}>
@@ -41,7 +42,7 @@ export const FeatureCards = () => {
               <h3 className={s.cardTitle}>{title}</h3>
               <p className={s.description}>{description}</p>
               <Button href={href} arrow className={s.cta}>
-                Accéder à la plateforme
+                {cta || 'Accéder à la plateforme'}
               </Button>
             </div>
           </article>
