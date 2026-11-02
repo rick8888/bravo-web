@@ -1,12 +1,11 @@
 @import 'styles/_functions';
 
 .page {
-  --uduma-bg: #f5f7fc;
-  --uduma-ink: #17213c;
-  --uduma-muted: #68748e;
-  --uduma-accent: #7657e8;
-  --uduma-primary: #3157d5;
-  --uduma-soft: #e1e8ff;
+  --uduma-bg: #f3f1ec;
+  --uduma-ink: #171817;
+  --uduma-muted: #6f716d;
+  --uduma-accent: #d56352;
+  --uduma-soft: #e9e6df;
 
   background: var(--uduma-bg);
   color: var(--uduma-ink);
@@ -50,9 +49,9 @@
 
 .brandMark {
   align-items: center;
-  background: linear-gradient(135deg, var(--uduma-primary), var(--uduma-accent));
+  background: var(--uduma-accent);
   border-radius: 50%;
-  color: #fff;
+  color: var(--uduma-ink);
   display: inline-flex;
   font-family: var(--font-anton);
   font-size: mobile-vw(21px);
@@ -70,7 +69,7 @@
 .backLink,
 .footerLink {
   align-items: center;
-  border-bottom: 1px solid rgba(23, 33, 60, 0.25);
+  border-bottom: 1px solid rgba(23, 24, 23, 0.3);
   color: var(--uduma-ink);
   display: inline-flex;
   font-size: mobile-vw(12px);
@@ -184,41 +183,35 @@
 
 .heroLink {
   align-items: center;
-  background: linear-gradient(135deg, var(--uduma-primary), var(--uduma-accent));
-  border-radius: mobile-vw(10px);
-  box-shadow: 0 6px 14px rgba(65, 78, 201, 0.2);
-  color: #fff;
+  border-bottom: 1px solid rgba(23, 24, 23, 0.35);
+  color: var(--uduma-ink);
   display: inline-flex;
   font-size: mobile-vw(12px);
   font-weight: 700;
   gap: mobile-vw(12px);
   margin-top: mobile-vw(28px);
-  min-height: mobile-vw(46px);
-  padding: 0 mobile-vw(18px);
+  padding: mobile-vw(10px) 0;
   text-decoration: none;
   text-transform: uppercase;
-  transition: box-shadow 180ms ease, transform 180ms ease;
 
   @include desktop {
     font-size: desktop-vw(12px);
     gap: desktop-vw(14px);
     margin-top: desktop-vw(34px);
-    min-height: desktop-vw(48px);
-    padding: 0 desktop-vw(20px);
   }
 
   span {
-    color: #fff;
+    color: var(--uduma-accent);
     font-size: 1.4em;
   }
 
   &:hover {
-    box-shadow: 0 8px 18px rgba(65, 78, 201, 0.28);
-    transform: translateY(-1px);
+    border-color: var(--uduma-accent);
+    color: var(--uduma-accent);
   }
 
   &:focus-visible {
-    outline: 2px solid var(--uduma-primary);
+    outline: 2px solid var(--uduma-accent);
     outline-offset: 4px;
   }
 }
@@ -226,10 +219,10 @@
 .visual {
   align-items: center;
   background:
-    radial-gradient(ellipse at 50% 45%, rgba(118, 87, 232, 0.16), transparent 55%),
-    #fff;
-  border: 1px solid rgba(49, 87, 213, 0.12);
-  border-radius: mobile-vw(20px);
+    radial-gradient(ellipse at 50% 45%, rgba(213, 99, 82, 0.15), transparent 55%),
+    #e9e6df;
+  border: 1px solid rgba(23, 24, 23, 0.1);
+  border-radius: mobile-vw(4px);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -246,7 +239,7 @@
 }
 
 .visualOrb {
-  border: 1px solid rgba(118, 87, 232, 0.28);
+  border: 1px solid rgba(213, 99, 82, 0.28);
   border-radius: 50%;
   height: mobile-vw(198px);
   left: 50%;
@@ -257,7 +250,7 @@
 
   &::before,
   &::after {
-    border: 1px solid rgba(49, 87, 213, 0.16);
+    border: 1px solid rgba(213, 99, 82, 0.16);
     border-radius: 50%;
     content: '';
     inset: mobile-vw(17px);
@@ -284,10 +277,10 @@
 
 .visualLabel {
   align-items: center;
-  background: linear-gradient(135deg, var(--uduma-primary), var(--uduma-accent));
-  border: mobile-vw(5px) solid #f5f7fc;
+  background: var(--uduma-ink);
+  border: mobile-vw(5px) solid #e9e6df;
   border-radius: 50%;
-  color: #fff;
+  color: #f3f1ec;
   display: flex;
   font-family: var(--font-panchang);
   font-size: mobile-vw(14px);
@@ -308,10 +301,10 @@
 
 .personCard {
   align-items: center;
-  background: #fff;
-  border: 1px solid #e1e6f0;
-  border-radius: mobile-vw(14px);
-  box-shadow: 0 12px 30px rgba(24, 39, 75, 0.08);
+  background: #f8f7f3;
+  border: 1px solid rgba(23, 24, 23, 0.12);
+  border-radius: mobile-vw(3px);
+  box-shadow: 0 12px 30px rgba(23, 24, 23, 0.08);
   display: flex;
   gap: mobile-vw(10px);
   max-width: calc(100% - mobile-vw(24px));
@@ -348,9 +341,9 @@
 
 .personIcon {
   align-items: center;
-  background: #f1f4ff;
+  background: #f4ded9;
   border-radius: 50%;
-  color: var(--uduma-primary);
+  color: var(--uduma-accent);
   display: flex;
   flex: 0 0 auto;
   height: mobile-vw(36px);
@@ -444,7 +437,7 @@
 }
 
 .purpose {
-  background: #fff;
+  background: #fffdfa;
   padding: mobile-vw(58px) var(--layout-margin) mobile-vw(68px);
 
   @include desktop {
@@ -503,9 +496,9 @@
 }
 
 .audienceCard {
-  background: #fff;
-  border: 1px solid #e1e6f0;
-  border-radius: mobile-vw(16px);
+  background: var(--uduma-bg);
+  border: 1px solid rgba(23, 24, 23, 0.12);
+  border-radius: mobile-vw(3px);
   min-width: 0;
   padding: mobile-vw(22px);
 
@@ -553,8 +546,8 @@
 
 .downloads {
   align-items: start;
-  background: linear-gradient(130deg, #3157d5 0%, #7657e8 100%);
-  color: #fff;
+  background: #171817;
+  color: #f3f1ec;
   display: grid;
   gap: mobile-vw(28px);
   padding: mobile-vw(54px) var(--layout-margin);
@@ -569,7 +562,7 @@
 
 .downloadCopy {
   .sectionEyebrow {
-    color: #e1e8ff;
+    color: #ff98a2;
   }
 
   h2 {
@@ -608,16 +601,14 @@
 
 .downloadButton {
   align-items: center;
-  background: #fff;
+  background: #f3f1ec;
   color: var(--uduma-ink);
   display: flex;
   gap: mobile-vw(12px);
   min-height: mobile-vw(72px);
   padding: mobile-vw(12px);
   text-decoration: none;
-  transition: background-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
-  border: 1px solid rgba(255, 255, 255, 0.7);
-  border-radius: mobile-vw(14px);
+  transition: background-color 180ms ease, transform 180ms ease;
 
   @include desktop {
     gap: desktop-vw(16px);
@@ -626,22 +617,20 @@
   }
 
   &:hover {
-    background: #f1f4ff;
-    box-shadow: 0 12px 28px rgba(23, 33, 60, 0.16);
+    background: #fff;
     transform: translateY(-2px);
   }
 
   &:focus-visible {
-    outline: 2px solid #fff;
+    outline: 2px solid #ff98a2;
     outline-offset: 4px;
   }
 }
 
 .downloadIcon {
   align-items: center;
-  background: #f1f4ff;
-  border-radius: mobile-vw(10px);
-  color: var(--uduma-primary);
+  background: #e9e6df;
+  color: var(--uduma-accent);
   display: flex;
   flex: 0 0 auto;
   height: mobile-vw(42px);
@@ -782,12 +771,10 @@
   }
 
   .heroLink {
-    border-radius: 9px;
     font-size: 11px;
     gap: 10px;
     margin-top: 22px;
-    min-height: 44px;
-    padding: 0 16px;
+    padding: 10px 0;
   }
 
   .visual {
